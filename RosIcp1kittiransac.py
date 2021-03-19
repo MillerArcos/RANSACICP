@@ -165,19 +165,19 @@ class laser_subs(object): #Para crear clase
             np.savetxt(filename, self.pose_list, delimiter=",")
         
         
-#        if(self.for_idx % num_frames_to_skip_to_show == 0): 
-#            self.x = self.pose_list[:,3]
-#            self.y = self.pose_list[:,7]
+        if(self.for_idx % num_frames_to_skip_to_show == 0): 
+            self.x = self.pose_list[:,3]
+            self.y = self.pose_list[:,7]
 ##            z = self.pose_list[:,11]
-#    
-#            fig = plt.figure(fig_idx)
-#            plt.clf()
-#            plt.plot(-self.y, self.x, color='blue') # kitti camera coord for clarity
-#            plt.axis('equal')
-#            plt.xlabel('x', labelpad=10) 
-#            plt.ylabel('y', labelpad=10)
-#            plt.draw()
-#            plt.pause(0.01) #is necessary for the plot to update for some reason
+    
+            fig = plt.figure(fig_idx)
+            plt.clf()
+            plt.plot(-self.y, self.x, color='blue') # kitti camera coord for clarity
+            plt.axis('equal')
+            plt.xlabel('x', labelpad=10) 
+            plt.ylabel('y', labelpad=10)
+            plt.draw()
+            plt.pause(0.01) #is necessary for the plot to update for some reason
 #            ResultSaver.vizCurrentTrajectory(fig_idx=fig_idx)
         self.for_idx= self.for_idx+1
 #                writer.grab_frame()
