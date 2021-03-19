@@ -72,11 +72,7 @@ class laser_subs(object): #Para crear clase
         # Result saver
         self.save_dir = "result/" + self.sequence_idx
         if not os.path.exists(self.save_dir): os.makedirs(self.save_dir)
-        ResultSaver = PoseGraphResultSaver(init_pose=self.curr_se3, 
-                                     save_gap=self.save_gap,
-                                     num_frames=self.num_frames,
-                                     seq_idx=self.sequence_idx,
-                                     save_dir=self.save_dir)
+        
         
         # Scan Context Manager (for loop detection) initialization
         
