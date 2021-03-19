@@ -15,7 +15,7 @@ import time
 from nav_msgs.msg import Odometry
 msg = Odometry()
 from skimage.measure import LineModelND, ransac
-import pyransac3d as pyrsc
+
 
 from mpl_toolkits import mplot3d
 import matplotlib.pyplot as plt
@@ -23,12 +23,9 @@ import numpy as np
 np.set_printoptions(precision=4)
 from matplotlib.animation import FFMpegWriter
 
-from tqdm import tqdm
 
-from minisam import *
-from utils.ScanContextManager import *
-from utils.PoseGraphManager import *
-from utils.UtilsMisc import *
+
+
 import utils.UtilsPointcloud as Ptutils
 import utils.ICP as ICP
 
